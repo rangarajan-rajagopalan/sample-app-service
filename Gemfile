@@ -40,3 +40,8 @@ gem 'jquery-rails'
 
 gem 'mysql2', '0.3.19'
 gem 'redis', '3.2.1'
+gem 'redis-objects', '~> 1.2', '>= 1.2.1'
+gem 'redis-namespace','1.5.1'
+gem 'redis-rails'
+
+gem 'bcrypt', '~> 3.1.7'

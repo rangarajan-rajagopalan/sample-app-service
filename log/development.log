@@ -2146,3 +2146,8 @@ Processing by NotesController#details as */*
   Parameters: {"user_id"=>"10000", "id"=>"10001", "note"=>{}}
   [1m[36mNotes Load (0.4ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10001 AND `notes`.`user_id` = 10000 AND `notes`.`is_deleted` = 0 LIMIT 1[0m
 Completed 200 OK in 40.3ms (Views: 2.2ms | ActiveRecord: 1.8ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
