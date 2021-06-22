@@ -1,0 +1,2148 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2021-06-18 15:09:06 +0530
+Connecting to database specified by database.yml
+
+ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+  activerecord (3.2.22.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.22.5) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.22.5) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.22.5) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.22.5) lib/active_record/query_cache.rb:60:in `call'
+  activerecord (3.2.22.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:405:in `_run__4446564942053629372__call__377202720006174419__callbacks'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.22.5) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.22.5) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.22.5) lib/rails/engine.rb:484:in `call'
+  railties (3.2.22.5) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.22.5) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/server.rb:314:in `block in start_thread'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (24.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (27.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (0.3ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: All parts of a PRIMARY KEY must be NOT NULL; if you need NULL in a key, use UNIQUE instead: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (0.3ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: All parts of a PRIMARY KEY must be NOT NULL; if you need NULL in a key, use UNIQUE instead: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (24.2ms)[0m  CREATE TABLE `users` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (23.9ms)[0m  [1mCREATE INDEX `index_users_on_user_id` ON `users` (`user_id`)[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210618094811')
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-18 11:23:51', 0, 1, '2021-06-18 11:23:51', 'Rails', 800000000, 'Admin', '123', 'Admin')[0m
+  [1m[35m (3.0ms)[0m  COMMIT
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+Migrating to CreateFolders (20210618115335)
+  [1m[35m (27.2ms)[0m  CREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `users_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+Migrating to CreateFolders (20210618115335)
+  [1m[35m (0.5ms)[0m  CREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `users_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: Table 'folders' already exists: CREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `users_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateUsers (20210618094811)
+  [1m[36m (26.1ms)[0m  [1mDROP INDEX `index_users_on_user_id` ON `users`[0m
+  [1m[35m (2.4ms)[0m  DROP TABLE `users`
+  [1m[36m (0.5ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20210618094811'[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (23.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (27.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (24.3ms)[0m  CREATE TABLE `users` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (24.0ms)[0m  [1mCREATE INDEX `index_users_on_user_id` ON `users` (`user_id`)[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210618094811')
+Migrating to CreateFolders (20210618115335)
+  [1m[36m (25.6ms)[0m  [1mCREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `users_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+Migrating to CreateFolders (20210618115335)
+  [1m[35m (0.2ms)[0m  CREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `users_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: Table 'folders' already exists: CREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `users_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateUsers (20210618094811)
+  [1m[36m (23.7ms)[0m  [1mDROP INDEX `index_users_on_user_id` ON `users`[0m
+  [1m[35m (2.7ms)[0m  DROP TABLE `users`
+  [1m[36m (0.6ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20210618094811'[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (24.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (26.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (25.8ms)[0m  CREATE TABLE `users` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (23.1ms)[0m  [1mCREATE INDEX `index_users_on_user_id` ON `users` (`user_id`)[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210618094811')
+Migrating to CreateFolders (20210618115335)
+  [1m[36m (22.9ms)[0m  [1mCREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `user_id_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210618115335')
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateFolders (20210618115335)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateFolders (20210618115335)
+  [1m[36m (2.3ms)[0m  [1mDROP TABLE `folders`[0m
+  [1m[35m (0.3ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20210618115335'
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateUsers (20210618094811)
+  [1m[36m (22.9ms)[0m  [1mDROP INDEX `index_users_on_user_id` ON `users`[0m
+  [1m[35m (3.0ms)[0m  DROP TABLE `users`
+  [1m[36m (0.6ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20210618094811'[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (25.6ms)[0m  CREATE TABLE `users` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (23.9ms)[0m  [1mCREATE INDEX `index_users_on_user_id` ON `users` (`user_id`)[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210618094811')
+Migrating to CreateFolders (20210618115335)
+  [1m[36m (24.3ms)[0m  [1mCREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (24.4ms)[0m  CREATE INDEX `index_folders_on_folder_id` ON `folders` (`folder_id`)
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20210618115335')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateFolders (20210618115335)
+  [1m[36m (24.4ms)[0m  [1mDROP INDEX `index_folders_on_folder_id` ON `folders`[0m
+  [1m[35m (2.0ms)[0m  DROP TABLE `folders`
+  [1m[36m (0.5ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20210618115335'[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+Migrating to CreateFolders (20210618115335)
+  [1m[35m (22.9ms)[0m  CREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateUsers (20210618094811)
+  [1m[36m (25.7ms)[0m  [1mDROP INDEX `index_users_on_user_id` ON `users`[0m
+  [1m[35m (2.6ms)[0m  DROP TABLE `users`
+  [1m[36m (0.4ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20210618094811'[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (26.4ms)[0m  CREATE TABLE `users` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (23.8ms)[0m  [1mCREATE INDEX `index_users_on_user_id` ON `users` (`user_id`)[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210618094811')
+Migrating to CreateFolders (20210618115335)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+Mysql2::Error: Table 'folders' already exists: CREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateUsers (20210618094811)
+  [1m[36m (23.5ms)[0m  [1mDROP INDEX `index_users_on_user_id` ON `users`[0m
+  [1m[35m (2.5ms)[0m  DROP TABLE `users`
+  [1m[36m (0.5ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20210618094811'[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (24.4ms)[0m  CREATE TABLE `users` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (24.0ms)[0m  [1mCREATE INDEX `index_users_on_user_id` ON `users` (`user_id`)[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210618094811')
+Migrating to CreateFolders (20210618115335)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+Mysql2::Error: Table 'folders' already exists: CREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateUsers (20210618094811)
+  [1m[36m (29.4ms)[0m  [1mDROP INDEX `index_users_on_user_id` ON `users`[0m
+  [1m[35m (2.8ms)[0m  DROP TABLE `users`
+  [1m[36m (0.5ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20210618094811'[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (24.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (26.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+  [1m[35m (23.6ms)[0m  CREATE TABLE `users` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `user_id` BIGINT UNSIGNED NOT NULL, `user_first_name` varchar(255), `user_last_name` varchar(255), `user_role` varchar(255), `user_password` varchar(255), `is_login_enabled` tinyint(1) DEFAULT 0 NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (23.5ms)[0m  [1mCREATE INDEX `index_users_on_user_id` ON `users` (`user_id`)[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210618094811')
+Migrating to CreateFolders (20210618115335)
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE `folders` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `folder_id` BIGINT UNSIGNED NOT NULL, `folder_name` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (24.4ms)[0m  CREATE INDEX `index_folders_on_folder_id` ON `folders` (`folder_id`)
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20210618115335')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20210618094811)
+Migrating to CreateFolders (20210618115335)
+Migrating to CreateNotes (20210621082127)
+  [1m[35m (24.4ms)[0m  CREATE TABLE `notes` (`id` BIGINT UNSIGNED auto_increment PRIMARY KEY, `note_id` BIGINT UNSIGNED NOT NULL, `notes_title` varchar(255) NOT NULL, `notes_description` varchar(255) NOT NULL, `is_deleted` tinyint(1) DEFAULT 0 NOT NULL, `folder_id` int(11), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (25.1ms)[0m  [1mCREATE INDEX `index_notes_on_note_id` ON `notes` (`note_id`)[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20210621082127')
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users" for 127.0.0.1 at 2021-06-21 14:28:16 +0530
+Processing by UsersController#list as */*
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+Completed 200 OK in 18.1ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:35:14 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.5ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:22:in `user_params'
+  app/controllers/users_controller.rb:13:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:36:10 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.4ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:22:in `user_params'
+  app/controllers/users_controller.rb:13:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+Connecting to database specified by database.yml
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:36:49 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.4ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:23:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:38:11 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.5ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:23:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:38:58 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.5ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:40:29 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.4ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:42:54 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2.6ms
+
+NoMethodError (undefined method `permit' for #<ActiveSupport::HashWithIndifferentAccess:0x00007fce508b5580>
+Did you mean?  print):
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:45:48 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2.5ms
+
+LoadError (cannot load such file -- :user):
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:46:16 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]", "user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 3.4ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:46:36 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2.8ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:48:16 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.6ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:48:26 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"users"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}, "user"=>{"users"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.3ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:25:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:49:47 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"users"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}, "user"=>{"users"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 1.8ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:26:in `user_params'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:50:24 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"users"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}, "user"=>{"users"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2.0ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:27:in `user_params'
+  app/controllers/users_controller.rb:15:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:51:06 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"users"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}, "user"=>{"users"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2.3ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:26:in `user_params'
+  app/controllers/users_controller.rb:15:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:51:26 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.4ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:26:in `user_params'
+  app/controllers/users_controller.rb:15:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 14:52:19 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 0.3ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/users_controller.rb:26:in `user_params'
+  app/controllers/users_controller.rb:15:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:19:23 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 12.9ms
+
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007fce508ae7a8>
+Did you mean?  users_path):
+  app/controllers/users_controller.rb:16:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:23:13 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2.2ms
+
+NoMethodError (undefined method `user' for #<ActiveSupport::HashWithIndifferentAccess:0x00007fce4eb25b00>):
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:23:43 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 1.7ms
+
+NoMethodError (undefined method `user' for #<ActiveSupport::HashWithIndifferentAccess:0x00007fce4ebacf10>):
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:25:14 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 3.7ms
+
+NoMethodError (undefined method `user_first_name=' for {}:Hash):
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:25:37 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 3.8ms
+
+NoMethodError (undefined method `user_first_name=' for {}:Hash):
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:26:07 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 3.7ms
+
+NoMethodError (undefined method `user_first_name=' for {}:Hash):
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+Connecting to database specified by database.yml
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:26:26 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 3.4ms
+
+NoMethodError (undefined method `user_first_name=' for {}:Hash):
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:26:52 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 09:56:52', 0, 0, '2021-06-21 09:56:52', NULL, NULL, NULL, NULL, NULL)
+Mysql2::Error: Column 'user_id' cannot be null: INSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 09:56:52', 0, 0, '2021-06-21 09:56:52', NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 34.2ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Column 'user_id' cannot be null: INSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 09:56:52', 0, 0, '2021-06-21 09:56:52', NULL, NULL, NULL, NULL, NULL)):
+  app/controllers/users_controller.rb:22:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:31:54 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUsers Load (0.2ms)[0m  SELECT Max(user_id) FROM `users` 
+Completed 500 Internal Server Error in 13.0ms
+
+TypeError (no implicit conversion of Fixnum into Array):
+  app/controllers/users_controller.rb:17:in `+'
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:32:52 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT Max(user_id) FROM `users` [0m
+Completed 500 Internal Server Error in 9.2ms
+
+TypeError (no implicit conversion of Array into String):
+  app/controllers/users_controller.rb:14:in `+'
+  app/controllers/users_controller.rb:14:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:33:19 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUsers Load (0.2ms)[0m  SELECT Max(user_id) FROM `users` 
+Completed 500 Internal Server Error in 8.3ms
+
+TypeError (no implicit conversion of Fixnum into Array):
+  app/controllers/users_controller.rb:17:in `+'
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:34:16 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`users`.`user_id`) AS max_id FROM `users` [0m
+Completed 500 Internal Server Error in 4.4ms
+
+NoMethodError (undefined method `+' for nil:NilClass):
+  app/controllers/users_controller.rb:17:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:37:09 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  SELECT MAX(`users`.`user_id`) AS max_id FROM `users` 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 10:07:09', 0, 0, '2021-06-21 10:07:09', NULL, NULL, NULL, NULL, NULL)
+Mysql2::Error: Column 'user_id' cannot be null: INSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 10:07:09', 0, 0, '2021-06-21 10:07:09', NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 10.7ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Column 'user_id' cannot be null: INSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 10:07:09', 0, 0, '2021-06-21 10:07:09', NULL, NULL, NULL, NULL, NULL)):
+  app/controllers/users_controller.rb:26:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:48:00 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  SELECT MAX(`users`.`user_id`) AS max_id FROM `users` 
+Completed 500 Internal Server Error in 4.5ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: user_first_name, user_last_name, user_password, user_role, is_login_enabled, is_deleted):
+  app/controllers/users_controller.rb:29:in `insertRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:49:31 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`users`.`user_id`) AS max_id FROM `users` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 10:19:31', 0, 1, '2021-06-21 10:19:31', 'Sachin', 10000, 'Tendulkar', 'sachin@123', 'creator')[0m
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 11.6ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:50:52 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mSELECT MAX(`users`.`user_id`) AS max_id FROM `users` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 10:20:52', 0, 1, '2021-06-21 10:20:52', 'Sachin', 10001, 'Tendulkar', 'sachin@123', 'creator')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 10.2ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:54:37 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`users`.`user_id`) AS max_id FROM `users` [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 10:24:37', 0, 1, '2021-06-21 10:24:37', 'Sachin', 10002, 'Tendulkar', 'sachin@123', 'creator')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 11.1ms (Views: 0.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-06-21 15:54:42 +0530
+Processing by UsersController#insertRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Tendulkar", "user_password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`users`.`user_id`) AS max_id FROM `users` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `is_deleted`, `is_login_enabled`, `updated_at`, `user_first_name`, `user_id`, `user_last_name`, `user_password`, `user_role`) VALUES ('2021-06-21 10:24:42', 0, 1, '2021-06-21 10:24:42', 'Sachin', 10003, 'Tendulkar', 'sachin@123', 'creator')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 2.6ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/10003" for 127.0.0.1 at 2021-06-21 15:57:47 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10003"}
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10003[0m
+Completed 200 OK in 14.9ms (Views: 6.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/10007" for 127.0.0.1 at 2021-06-21 15:57:54 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10007"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10007
+Completed 200 OK in 0.8ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/10007" for 127.0.0.1 at 2021-06-21 15:58:41 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10007"}
+Completed 500 Internal Server Error in 9.6ms
+
+NoMethodError (undefined method `find_by' for #<Class:0x00007fd1cf051d80>
+Did you mean?  find_by_sql):
+  app/controllers/users_controller.rb:10:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.2ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 15:58:54 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+Completed 500 Internal Server Error in 6.0ms
+
+NoMethodError (undefined method `find_by' for #<Class:0x00007fd1cf051d80>
+Did you mean?  find_by_sql):
+  app/controllers/users_controller.rb:10:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 15:59:25 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.3ms)[0m  [1m`users`.`user_id` = 10001[0m
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`users`.`user_id` = 10001' at line 1: `users`.`user_id` = 10001
+Completed 500 Internal Server Error in 3.7ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`users`.`user_id` = 10001' at line 1: `users`.`user_id` = 10001):
+  app/controllers/users_controller.rb:10:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:00:30 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 9.1ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/10009" for 127.0.0.1 at 2021-06-21 16:00:36 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10009"}
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10009 LIMIT 1[0m
+Completed 200 OK in 1.0ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/10009" for 127.0.0.1 at 2021-06-21 16:01:33 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10009"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10009 LIMIT 1
+Completed 200 OK in 3.5ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/10009" for 127.0.0.1 at 2021-06-21 16:02:04 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10009"}
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10009 LIMIT 1[0m
+Completed 200 OK in 4.8ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/10009" for 127.0.0.1 at 2021-06-21 16:02:24 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10009"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10009 LIMIT 1
+Completed 200 OK in 3.8ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/10009" for 127.0.0.1 at 2021-06-21 16:02:44 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10009"}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10009 LIMIT 1[0m
+Completed 404 Not Found in 3.6ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:02:49 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 4.8ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:04:37 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 500 Internal Server Error in 9.0ms
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  app/controllers/users_controller.rb:16:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.1ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:05:34 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 500 Internal Server Error in 13.2ms
+
+NoMethodError (undefined method `except' for #<Users:0x00007fd1d0992808>
+Did you mean?  exec):
+  app/controllers/users_controller.rb:17:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.4ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:06:55 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 500 Internal Server Error in 13.6ms
+
+NoMethodError (undefined method `remove' for #<Users:0x00007fd1cbb87848>):
+  app/controllers/users_controller.rb:16:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.6ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:07:49 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 500 Internal Server Error in 11.9ms
+
+NoMethodError (undefined method `slice' for #<Users:0x00007fd1cda2b8d0>):
+  app/controllers/users_controller.rb:16:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.5ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:10:01 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 500 Internal Server Error in 8.7ms
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  app/controllers/users_controller.rb:16:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:10:31 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 9.7ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:11:01 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 8.9ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:14:38 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 500 Internal Server Error in 14.2ms
+
+NoMethodError (private method `update' called for #<Users:0x00007fd1cda40b68>
+Did you mean?  updated_at):
+  app/controllers/users_controller.rb:45:in `removeRecord'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.7ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:16:21 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 500 Internal Server Error in 8.2ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:17:03 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUsers Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 500 Internal Server Error in 14.1ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:17:50 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE `users` SET `is_deleted` = 1, `updated_at` = '2021-06-21 10:47:50' WHERE `users`.`id` = 2[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 11.4ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:17:55 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 1.2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:22:35 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 9.0ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:22:50 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 2.0ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:22:53 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 1.2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:27:45 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 9.7ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:27:51 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUsers Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 500 Internal Server Error in 6.1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:31:27 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001[0m
+Completed 500 Internal Server Error in 18.0ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:32:13 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001
+Completed 500 Internal Server Error in 19.2ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:32:34 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `is_deleted` = 1 WHERE `users`.`user_id` = 10001
+Completed 200 OK in 9.5ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:32:43 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 1.6ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:36:44 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `users` SET `is_deleted` = 1 WHERE `users`.`id` = 2[0m
+Completed 200 OK in 10.6ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:36:49 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 1.2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 16:37:08 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `is_deleted` = 1 WHERE `users`.`id` = 2
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  UPDATE `users` SET `is_deleted` = 1, `updated_at` = '2021-06-21 11:07:08' WHERE `users`.`id` = 2
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 11.6ms (Views: 0.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:37:11 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 1.4ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:38:02 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 1.0ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:38:25 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 9.0ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 16:58:07 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 1.1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 17:13:34 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 10.1ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 17:14:57 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 9.7ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 17:15:14 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 30.4ms (Views: 1.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 17:15:43 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1
+Completed 200 OK in 14.1ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 17:15:55 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 LIMIT 1[0m
+Completed 200 OK in 15.4ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/10001" for 127.0.0.1 at 2021-06-21 17:17:20 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10001"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 AND (0) LIMIT 1
+Completed 404 Not Found in 5.5ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/10001" for 127.0.0.1 at 2021-06-21 17:17:27 +0530
+Processing by UsersController#removeRecord as */*
+  Parameters: {"id"=>"10001"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10001 AND (0) LIMIT 1[0m
+Completed 404 Not Found in 1.2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-06-21 17:17:35 +0530
+Processing by UsersController#list as */*
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (0)
+Completed 200 OK in 1.1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-06-21 17:17:54 +0530
+Processing by UsersController#list as */*
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+Completed 200 OK in 9.6ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/10000" for 127.0.0.1 at 2021-06-21 17:47:31 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10000"}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10000 LIMIT 1
+Completed 200 OK in 9.6ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/users/10000" for 127.0.0.1 at 2021-06-21 17:48:03 +0530
+
+ActionController::RoutingError (No route matches [PUT] "/users/10000"):
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.22.5) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.22.5) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.22.5) lib/rails/engine.rb:484:in `call'
+  railties (3.2.22.5) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.22.5) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/server.rb:314:in `block in start_thread'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started PUT "/users/10000" for 127.0.0.1 at 2021-06-21 17:48:49 +0530
+Processing by UsersController#updateRecord as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}, "id"=>"10000"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10000 LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `users` SET `user_first_name` = 'Sachin' WHERE `users`.`id` = 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `user_last_name` = 'Ramesh Tendulkar' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 200 OK in 17.2ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/10000" for 127.0.0.1 at 2021-06-21 17:48:59 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10000", "user"=>{}}
+  [1m[35mUsers Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10000 LIMIT 1
+Completed 200 OK in 1.4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/users/10000" for 127.0.0.1 at 2021-06-22 18:17:07 +0530
+Processing by UsersController#details as */*
+  Parameters: {"id"=>"10000", "user"=>{}}
+  [1m[36mUsers Load (4.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_id` = 10000 LIMIT 1[0m
+Completed 200 OK in 46.5ms (Views: 1.9ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2021-06-22 18:17:40 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"folder"=>{}}
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` IS NULL
+Completed 200 OK in 5.2ms (Views: 1.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 18:18:05 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (1.8ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 16.1ms (Views: 0.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-06-22 18:19:38 +0530
+Processing by UsersController#list as */*
+  Parameters: {"user"=>{}}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` 
+Completed 200 OK in 13.7ms (Views: 0.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 18:19:54 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.2ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 12:49:54', 10000, 'Applications', 0, '2021-06-22 12:49:54', 10000)[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+Completed 200 OK in 19.9ms (Views: 0.2ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2021-06-22 19:11:41 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"folder"=>{}}
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` IS NULL[0m
+Completed 200 OK in 4.8ms (Views: 1.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/folders?user_id=10000" for 127.0.0.1 at 2021-06-22 19:12:30 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"user_id"=>"10000", "folder"=>{}}
+  [1m[35mFolders Load (0.3ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` = 10000
+Completed 200 OK in 4.5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 19:15:51 +0530
+Processing by FoldersController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10000", "folder"=>{}}
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10000 AND `folders`.`user_id` = 10000 LIMIT 1[0m
+Completed 200 OK in 1.4ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders/10010?user_id=10000" for 127.0.0.1 at 2021-06-22 19:15:55 +0530
+Processing by FoldersController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10010", "folder"=>{}}
+  [1m[35mFolders Load (0.3ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10010 AND `folders`.`user_id` = 10000 LIMIT 1
+Completed 404 Not Found in 0.9ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders/10010?user_id=10000" for 127.0.0.1 at 2021-06-22 19:17:33 +0530
+Processing by FoldersController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10010", "folder"=>{}}
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10010 AND `folders`.`user_id` = 10000 LIMIT 1[0m
+Completed 404 Not Found in 4.3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/folders/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 19:17:40 +0530
+Processing by FoldersController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10000", "folder"=>{}}
+  [1m[35mFolders Load (0.4ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10000 AND `folders`.`user_id` = 10000 LIMIT 1
+Completed 200 OK in 4.7ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/folders/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 19:17:48 +0530
+Processing by FoldersController#remove as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}, "user_id"=>"10000", "id"=>"10000", "folder"=>{"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10000 AND `folders`.`user_id` = 10000 LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE `folders` SET `is_deleted` = 1 WHERE `folders`.`id` = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 4.6ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/folders/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 19:17:52 +0530
+Processing by FoldersController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10000", "folder"=>{}}
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10000 AND `folders`.`user_id` = 10000 LIMIT 1[0m
+Completed 200 OK in 1.1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/folders/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 19:19:28 +0530
+Processing by FoldersController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10000", "folder"=>{}}
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10000 AND `folders`.`user_id` = 10000 LIMIT 1[0m
+Completed 200 OK in 27.4ms (Views: 1.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/folders/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 19:19:42 +0530
+Processing by FoldersController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10000", "folder"=>{}}
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10000 AND `folders`.`user_id` = 10000 AND (0) LIMIT 1
+Completed 404 Not Found in 6.2ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:19:55 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 AND (0) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` WHERE (0)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:49:55', 10000, 'Applications', 0, '2021-06-22 13:49:55', 10000)
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 17.7ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/folders/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 19:23:00 +0530
+Processing by FoldersController#remove as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}, "user_id"=>"10000", "id"=>"10000", "folder"=>{"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10000 AND `folders`.`user_id` = 10000 AND (0) LIMIT 1
+Completed 404 Not Found in 4.1ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-06-22 19:23:25 +0530
+Processing by UsersController#list as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+Completed 200 OK in 10.3ms (Views: 0.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:23:39 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.3ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 AND (0) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:53:39', 10001, 'Applications', 0, '2021-06-22 13:53:39', 10000)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Completed 200 OK in 7.2ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:23:40 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 AND (0) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:53:40', 10002, 'Applications', 0, '2021-06-22 13:53:40', 10000)
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3.6ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:23:41 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 AND (0) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:53:41', 10003, 'Applications', 0, '2021-06-22 13:53:41', 10000)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 3.9ms (Views: 0.1ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/folders/10003?user_id=10000" for 127.0.0.1 at 2021-06-22 19:23:47 +0530
+Processing by FoldersController#remove as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}, "user_id"=>"10000", "id"=>"10003", "folder"=>{"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10003 AND `folders`.`user_id` = 10000 AND (0) LIMIT 1[0m
+Completed 404 Not Found in 1.0ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2021-06-22 19:24:12 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"folder"=>{}}
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` IS NULL AND (0)
+Completed 200 OK in 1.0ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2021-06-22 19:24:25 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"folder"=>{}}
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` IS NULL[0m
+Completed 200 OK in 4.7ms (Views: 1.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/folders?user_id=10000" for 127.0.0.1 at 2021-06-22 19:24:56 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"user_id"=>"10000", "folder"=>{}}
+  [1m[35mFolders Load (0.3ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` = 10000
+Completed 200 OK in 5.7ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:25:08 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:55:08', 10004, 'Applications', 0, '2021-06-22 13:55:08', 10000)
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 4.5ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:26:14 +0530
+
+SyntaxError (/Users/rrajagopalan/work/sample-app/app/controllers/folders_controller.rb:72: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.22.5) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.22.5) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.22.5) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.22.5) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.22.5) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.22.5) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.7) lib/rack/etag.rb:23:in `call'
+  rack (1.4.7) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.7) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.7) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.22.5) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.22.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:405:in `_run__1935504344828888294__call__723826507413410720__callbacks'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.22.5) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.22.5) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.22.5) lib/rails/engine.rb:484:in `call'
+  railties (3.2.22.5) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.22.5) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/server.rb:314:in `block in start_thread'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.1ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:26:49 +0530
+
+SyntaxError (/Users/rrajagopalan/work/sample-app/app/controllers/folders_controller.rb:72: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.22.5) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.22.5) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.22.5) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.22.5) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.22.5) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.22.5) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.22.5) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.7) lib/rack/etag.rb:23:in `call'
+  rack (1.4.7) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.7) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.7) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.22.5) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.22.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:405:in `_run__1935504344828888294__call__723826507413410720__callbacks'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.22.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.22.5) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.22.5) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.22.5) lib/rails/engine.rb:484:in `call'
+  railties (3.2.22.5) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.22.5) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/server.rb:314:in `block in start_thread'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.8ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:27:31 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:57:31', 10005, 'Applications', 0, '2021-06-22 13:57:31', 10000)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 11.6ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:27:37 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:57:37', 10006, 'Applications', 0, '2021-06-22 13:57:37', 10000)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3.0ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:29:16 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:59:16', 10007, 'Applications', 0, '2021-06-22 13:59:16', 10000)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 10.8ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:29:26 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:59:26', 10008, 'Applications', 0, '2021-06-22 13:59:26', 10000)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 10.7ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:29:59 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 13:59:59', 10009, 'Applications', 0, '2021-06-22 13:59:59', 10000)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 11.2ms (Views: 0.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:30:48 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 14:00:48', 10010, 'Applications', 0, '2021-06-22 14:00:48', 10000)
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 13.5ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:31:28 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 14:01:28', 10011, 'Applications', 0, '2021-06-22 14:01:28', 10000)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Completed 200 OK in 12.3ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:32:06 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1[0m
+Completed 400 Bad Request in 8.8ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:40:38 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1
+Completed 400 Bad Request in 7.7ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:41:15 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 LIMIT 1[0m
+Completed 500 Internal Server Error in 12.0ms
+
+NoMethodError (undefined method `info' for #<FoldersController:0x00007ff2d7841fa8>):
+  app/controllers/folders_controller.rb:22:in `insert'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.1ms)
+
+
+Started GET "/folders?user_id=10000" for 127.0.0.1 at 2021-06-22 19:41:45 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"user_id"=>"10000", "folder"=>{}}
+  [1m[35mFolders Load (0.4ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` = 10000
+Completed 200 OK in 2.8ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/folders?user_id=10000" for 127.0.0.1 at 2021-06-22 19:42:32 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"user_id"=>"10000", "folder"=>{}}
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` = 10000 AND (1)[0m
+Completed 200 OK in 8.8ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/folders?user_id=10000" for 127.0.0.1 at 2021-06-22 19:42:42 +0530
+Processing by FoldersController#list as */*
+  Parameters: {"user_id"=>"10000", "folder"=>{}}
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`user_id` = 10000
+Completed 200 OK in 9.1ms (Views: 5.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-06-22 19:43:18 +0530
+Processing by UsersController#list as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUsers Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+Completed 200 OK in 9.6ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-06-22 19:47:27 +0530
+Processing by UsersController#list as */*
+  Parameters: {"user"=>{}}
+  [1m[35mUsers Load (0.2ms)[0m  SELECT `users`.* FROM `users` 
+Completed 200 OK in 13.2ms (Views: 0.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:48:49 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 11.2ms
+
+NoMethodError (undefined method `info' for #<FoldersController:0x00007ff2d54c08b8>):
+  app/controllers/folders_controller.rb:22:in `insert'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:49:22 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 14:19:22', 10012, 'Applications', 0, '2021-06-22 14:19:22', 10000)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 12.8ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:49:26 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1[0m
+Completed 400 Bad Request in 1.3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2021-06-22 19:49:42 +0530
+Processing by FoldersController#insert as */*
+  Parameters: {"folder"=>{"folder_name"=>"Applications"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.3ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_name` = 'Applications' AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`folders`.`folder_id`) AS max_id FROM `folders` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `folders` (`created_at`, `folder_id`, `folder_name`, `is_deleted`, `updated_at`, `user_id`) VALUES ('2021-06-22 14:19:42', 10013, 'Applications', 0, '2021-06-22 14:19:42', 10000)[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 200 OK in 3.8ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/folders/10003?user_id=10000" for 127.0.0.1 at 2021-06-22 19:50:13 +0530
+Processing by FoldersController#remove as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}, "user_id"=>"10000", "id"=>"10003", "folder"=>{"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10003 AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1[0m
+Completed 404 Not Found in 1.3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/folders?user_id=10000" for 127.0.0.1 at 2021-06-22 19:50:16 +0530
+
+ActionController::RoutingError (No route matches [DELETE] "/folders"):
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.22.5) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.22.5) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.22.5) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.22.5) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.22.5) lib/rails/engine.rb:484:in `call'
+  railties (3.2.22.5) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.22.5) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/rrajagopalan/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/server.rb:314:in `block in start_thread'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started DELETE "/folders?user_id=10000" for 127.0.0.1 at 2021-06-22 20:22:29 +0530
+Processing by FoldersController#remove as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}, "user_id"=>"10000", "folder"=>{"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.2ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` IS NULL AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1
+Completed 404 Not Found in 5.2ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2021-06-22 20:22:37 +0530
+Processing by NotesController#list as */*
+  Parameters: {"note"=>{}}
+  [1m[36mNotes Load (0.3ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE (is_deleted=false and user_id= and folder_id=)[0m
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and folder_id=)' at line 1: SELECT `notes`.* FROM `notes`  WHERE (is_deleted=false and user_id=  and folder_id=)
+Completed 500 Internal Server Error in 8.5ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and folder_id=)' at line 1: SELECT `notes`.* FROM `notes`  WHERE (is_deleted=false and user_id=  and folder_id=)):
+  app/controllers/notes_controller.rb:8:in `list'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.9ms)
+
+
+Started GET "/notes?user_id=10001" for 127.0.0.1 at 2021-06-22 20:23:42 +0530
+Processing by NotesController#list as */*
+  Parameters: {"user_id"=>"10001", "note"=>{}}
+  [1m[35mNotes Load (0.2ms)[0m  SELECT `notes`.* FROM `notes` WHERE (is_deleted=false and user_id= 10001)
+Completed 200 OK in 3.6ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/notes/10000?user_id=10001" for 127.0.0.1 at 2021-06-22 20:25:24 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10001", "id"=>"10000", "note"=>{}}
+  [1m[36mUsers Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`note_id` = '10000' AND `users`.`user_id` = 10001 LIMIT 1[0m
+Mysql2::Error: Unknown column 'users.note_id' in 'where clause': SELECT  `users`.* FROM `users`  WHERE `users`.`note_id` = '10000' AND `users`.`user_id` = 10001 LIMIT 1
+Completed 500 Internal Server Error in 4.1ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'users.note_id' in 'where clause': SELECT  `users`.* FROM `users`  WHERE `users`.`note_id` = '10000' AND `users`.`user_id` = 10001 LIMIT 1):
+  app/controllers/notes_controller.rb:12:in `details'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started GET "/notes/10000?user_id=10001" for 127.0.0.1 at 2021-06-22 20:25:42 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10001", "id"=>"10000", "note"=>{}}
+  [1m[35mNotes Load (0.3ms)[0m  SELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10000 AND `notes`.`user_id` = 10001 LIMIT 1
+Completed 404 Not Found in 3.6ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/notes/10000?user_id=10001" for 127.0.0.1 at 2021-06-22 20:48:15 +0530
+Processing by NotesController#remove as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}, "user_id"=>"10001", "id"=>"10000", "note"=>{"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNotes Load (0.3ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10000 AND `notes`.`user_id` = 10001 AND `notes`.`is_deleted` = 0 LIMIT 1[0m
+Completed 404 Not Found in 7.7ms (Views: 0.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/notes/10000?user_id=10001" for 127.0.0.1 at 2021-06-22 21:58:37 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10001", "id"=>"10000", "note"=>{}}
+  [1m[35mNotes Load (0.2ms)[0m  SELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10000 AND `notes`.`user_id` = 10001 LIMIT 1
+Completed 404 Not Found in 3.8ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2021-06-22 22:04:09 +0530
+Processing by NotesController#insert as */*
+  Parameters: {"note"=>{"folder_id"=>10013, "note_title"=>"WhatsApp", "note_description"=>"WhatsApp is used for communication"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10013 AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`notes`.`note_id`) AS max_id FROM `notes` 
+Completed 500 Internal Server Error in 12.6ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: note_id, note_title, note_description):
+  app/controllers/notes_controller.rb:37:in `new'
+  app/controllers/notes_controller.rb:37:in `insert'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2021-06-22 22:05:23 +0530
+Processing by NotesController#insert as */*
+  Parameters: {"note"=>{"folder_id"=>10013, "note_title"=>"WhatsApp", "note_description"=>"WhatsApp is used for communication"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10013 AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`notes`.`note_id`) AS max_id FROM `notes` 
+Completed 500 Internal Server Error in 13.0ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: note_title, note_description):
+  app/controllers/notes_controller.rb:37:in `new'
+  app/controllers/notes_controller.rb:37:in `insert'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.9ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2021-06-22 22:05:48 +0530
+Processing by NotesController#insert as */*
+  Parameters: {"note"=>{"folder_id"=>10013, "note_title"=>"WhatsApp", "note_description"=>"WhatsApp is used for communication"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.3ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10013 AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`notes`.`note_id`) AS max_id FROM `notes` 
+Completed 500 Internal Server Error in 16.9ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: note_title):
+  app/controllers/notes_controller.rb:37:in `new'
+  app/controllers/notes_controller.rb:37:in `insert'
+
+
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/rrajagopalan/.rvm/gems/ruby-2.3.7/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2021-06-22 22:06:52 +0530
+Processing by NotesController#insert as */*
+  Parameters: {"note"=>{"folder_id"=>10013, "note_title"=>"WhatsApp", "note_description"=>"WhatsApp is used for communication"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mFolders Load (0.2ms)[0m  [1mSELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10013 AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT MAX(`notes`.`note_id`) AS max_id FROM `notes` 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `notes` (`created_at`, `folder_id`, `is_deleted`, `note_id`, `notes_description`, `notes_title`, `updated_at`, `user_id`) VALUES ('2021-06-22 16:36:52', 10013, 0, 10000, 'WhatsApp is used for communication', 'WhatsApp', '2021-06-22 16:36:52', 10000)
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 20.3ms (Views: 0.2ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2021-06-22 22:07:16 +0530
+Processing by NotesController#insert as */*
+  Parameters: {"note"=>{"folder_id"=>10013, "note_title"=>"Instagram", "note_description"=>"Insta is used for uploading photos"}, "user_id"=>10000}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mFolders Load (0.3ms)[0m  SELECT `folders`.* FROM `folders` WHERE `folders`.`folder_id` = 10013 AND `folders`.`user_id` = 10000 AND `folders`.`is_deleted` = 0 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT MAX(`notes`.`note_id`) AS max_id FROM `notes` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `notes` (`created_at`, `folder_id`, `is_deleted`, `note_id`, `notes_description`, `notes_title`, `updated_at`, `user_id`) VALUES ('2021-06-22 16:37:16', 10013, 0, 10001, 'Insta is used for uploading photos', 'Instagram', '2021-06-22 16:37:16', 10000)[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 200 OK in 4.0ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/notes/10000?user_id=10001" for 127.0.0.1 at 2021-06-22 22:07:33 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10001", "id"=>"10000", "note"=>{}}
+  [1m[36mNotes Load (0.3ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10000 AND `notes`.`user_id` = 10001 LIMIT 1[0m
+Completed 404 Not Found in 1.1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes?user_id=10001" for 127.0.0.1 at 2021-06-22 22:07:48 +0530
+Processing by NotesController#list as */*
+  Parameters: {"user_id"=>"10001", "note"=>{}}
+  [1m[35mNotes Load (0.3ms)[0m  SELECT `notes`.* FROM `notes` WHERE (is_deleted=false and user_id= 10001)
+Completed 200 OK in 1.2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes?user_id=10000" for 127.0.0.1 at 2021-06-22 22:08:43 +0530
+Processing by NotesController#list as */*
+  Parameters: {"user_id"=>"10000", "note"=>{}}
+  [1m[36mNotes Load (0.3ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE (is_deleted=false and user_id= 10000)[0m
+Completed 200 OK in 1.5ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes?user_id=10000&folder_id=100012" for 127.0.0.1 at 2021-06-22 22:09:03 +0530
+Processing by NotesController#list as */*
+  Parameters: {"user_id"=>"10000", "folder_id"=>"100012", "note"=>{}}
+  [1m[35mNotes Load (0.3ms)[0m  SELECT `notes`.* FROM `notes` WHERE (is_deleted=false and user_id= 10000 and folder_id=100012)
+Completed 200 OK in 0.7ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes?user_id=10000&folder_id=100013" for 127.0.0.1 at 2021-06-22 22:09:06 +0530
+Processing by NotesController#list as */*
+  Parameters: {"user_id"=>"10000", "folder_id"=>"100013", "note"=>{}}
+  [1m[36mNotes Load (0.2ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE (is_deleted=false and user_id= 10000 and folder_id=100013)[0m
+Completed 200 OK in 0.7ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes?user_id=10000&folder_id=10013" for 127.0.0.1 at 2021-06-22 22:09:11 +0530
+Processing by NotesController#list as */*
+  Parameters: {"user_id"=>"10000", "folder_id"=>"10013", "note"=>{}}
+  [1m[35mNotes Load (0.3ms)[0m  SELECT `notes`.* FROM `notes` WHERE (is_deleted=false and user_id= 10000 and folder_id=10013)
+Completed 200 OK in 1.2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 22:09:32 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10000", "note"=>{}}
+  [1m[36mNotes Load (0.3ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10000 AND `notes`.`user_id` = 10000 LIMIT 1[0m
+Completed 200 OK in 1.2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/notes/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 22:09:43 +0530
+Processing by NotesController#remove as */*
+  Parameters: {"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}, "user_id"=>"10000", "id"=>"10000", "note"=>{"user"=>{"user_first_name"=>"Sachin", "user_last_name"=>"Ramesh Tendulkar"}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNotes Load (0.3ms)[0m  SELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10000 AND `notes`.`user_id` = 10000 AND `notes`.`is_deleted` = 0 LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `notes` SET `is_deleted` = 1 WHERE `notes`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3.3ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/notes/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 22:09:48 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10000", "note"=>{}}
+  [1m[35mNotes Load (0.3ms)[0m  SELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10000 AND `notes`.`user_id` = 10000 LIMIT 1
+Completed 200 OK in 1.0ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes/10000?user_id=10000" for 127.0.0.1 at 2021-06-22 22:10:39 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10000", "note"=>{}}
+  [1m[36mNotes Load (0.4ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10000 AND `notes`.`user_id` = 10000 AND `notes`.`is_deleted` = 0 LIMIT 1[0m
+Completed 404 Not Found in 5.1ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/notes/10001?user_id=10000" for 127.0.0.1 at 2021-06-22 22:10:50 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10001", "note"=>{}}
+  [1m[35mNotes Load (0.5ms)[0m  SELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10001 AND `notes`.`user_id` = 10000 AND `notes`.`is_deleted` = 0 LIMIT 1
+Completed 200 OK in 5.6ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/notes/10001?user_id=10000" for 127.0.0.1 at 2021-06-22 22:15:16 +0530
+Processing by NotesController#details as */*
+  Parameters: {"user_id"=>"10000", "id"=>"10001", "note"=>{}}
+  [1m[36mNotes Load (0.4ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`note_id` = 10001 AND `notes`.`user_id` = 10000 AND `notes`.`is_deleted` = 0 LIMIT 1[0m
+Completed 200 OK in 40.3ms (Views: 2.2ms | ActiveRecord: 1.8ms)
