@@ -6,7 +6,6 @@ class Users < ActiveRecord::Base
   validates :user_last_name, length: { maximum: 3 }
   validates :user_password, length: { in: 6..20 }
 
-  # scope :is_deleted, ->{ where.not(is_deleted: true) }
-  # default_scope { where(is_deleted = false) }
+  default_scope { where(is_deleted: 0) }
 
 end

@@ -1,13 +1,13 @@
 class FoldersController < ApplicationController
   # GET /folders
   def list
-    @folders = Folders.where(user_id: params[:user_id], is_deleted: false)
+    @folders = Folders.where(user_id: params[:user_id])
     render json: @folders
   end
 
   # GET /folders/:id
   def details
-    @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id], is_deleted: false).first
+    @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
     if @folder.nil?
       render json: { error: "folder not found" }, status: 404
     else
@@ -17,23 +17,23 @@ class FoldersController < ApplicationController
 
   # POST /folders
   def insert
-    @folderName = params[:folder][:folder_name]
-    @folder = Folders.where(folder_name: @folderName, user_id: params[:user_id], is_deleted: false).first
-    unless @folder.nil?
+    folder_name = params[:folder][:folder_name]
+    folder_exists = Folders.exists?(folder_name: folder_name, user_id: params[:user_id])
+    if folder_exists
       render json: { error: "duplicate folder name not allowed" }, status: 400
       return
     end
 
-    @maxFolderId = Folders.maximum("folder_id")
-    result = {}
-    result[:folder_id] = @maxFolderId.nil? ? 10000 : @maxFolderId + 1
-    result[:folder_name] = @folderName
-    result[:user_id] = params[:user_id]
-    result[:is_deleted] = false
+    max_folder_id = Folders.unscoped.maximum("folder_id")
+    arg = {
+      folder_id:  max_folder_id.nil? ? 10000 : max_folder_id + 1,
+      folder_name: folder_name,
+      user_id: params[:user_id]
+    }
 
-    @folder = Folders.new(result)
+    @folder = Folders.new(arg)
     if @folder.save
-      render json: { message: "folder created", id: @folder[:id], folder_id: result[:folder_id] }, status: 200
+      render json: { message: "folder created", id: @folder.id, folder_id: @folder.folder_id }, status: 200
     else
       render json: { error: "error in adding record" }, status: 500
     end
@@ -41,12 +41,11 @@ class FoldersController < ApplicationController
 
   # PUT /folders/:id
   def update
-    @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id], is_deleted: false).first
+    @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
     if @folder.nil?
       render json: { error: "folder not found" }, status: 404
     else
       @folder.update_column(:folder_name, params[:folder][:folder_name])
-      @folder.save
       render json: { message: "folder details updated", folder_id: params[:id] }, status: 200
     end
   end
@@ -54,17 +53,15 @@ class FoldersController < ApplicationController
   # DELETE /folders/:id
   def remove
     begin
-      @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id], is_deleted: false).first
+      @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
       if @folder.nil?
         render json: { error: "folder not found" }, status: 404
       else
         @folder.update_column(:is_deleted, true)
-        @folder.save
         render json: { message: "folder deleted", folder_id: params[:id] }, status: 200
       end
     rescue => error
-      puts "Error received"
-      puts error
+      logger.info "Error in deleting: #{error}"
       render json: { error: "server error" }, status: 500
     end
   end

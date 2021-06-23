@@ -5,5 +5,5 @@ class Folders < ActiveRecord::Base
   validates :folder_name, length: { minimum: 3 }
   validates :user_id, numericality: true
 
-  default_scope { where(is_deleted = false) }
+  default_scope { where(is_deleted: 0) }
 end
