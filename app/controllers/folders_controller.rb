@@ -1,17 +1,17 @@
 class FoldersController < ApplicationController
   # GET /folders
   def list
-    @folders = Folders.where(user_id: params[:user_id])
-    render json: @folders
+    folders = Folders.where(user_id: params[:user_id])
+    render json: {folders: folders}
   end
 
   # GET /folders/:id
   def details
-    @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
-    if @folder.nil?
+    folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
+    if folder.nil?
       render json: { error: "folder not found" }, status: 404
     else
-      render json: @folder
+      render json: folder
     end
   end
 
@@ -31,9 +31,9 @@ class FoldersController < ApplicationController
       user_id: params[:user_id]
     }
 
-    @folder = Folders.new(arg)
-    if @folder.save
-      render json: { message: "folder created", id: @folder.id, folder_id: @folder.folder_id }, status: 200
+    folder = Folders.new(arg)
+    if folder.save
+      render json: { message: "folder created", id: folder.id, folder_id: folder.folder_id }, status: 200
     else
       render json: { error: "error in adding record" }, status: 500
     end
@@ -41,11 +41,11 @@ class FoldersController < ApplicationController
 
   # PUT /folders/:id
   def update
-    @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
-    if @folder.nil?
+    folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
+    if folder.nil?
       render json: { error: "folder not found" }, status: 404
     else
-      @folder.update_column(:folder_name, params[:folder][:folder_name])
+      folder.update_column(:folder_name, params[:folder][:folder_name])
       render json: { message: "folder details updated", folder_id: params[:id] }, status: 200
     end
   end
@@ -53,11 +53,11 @@ class FoldersController < ApplicationController
   # DELETE /folders/:id
   def remove
     begin
-      @folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
-      if @folder.nil?
+      folder = Folders.where(folder_id: params[:id], user_id: params[:user_id]).first
+      if folder.nil?
         render json: { error: "folder not found" }, status: 404
       else
-        @folder.update_column(:is_deleted, true)
+        folder.update_column(:is_deleted, true)
         render json: { message: "folder deleted", folder_id: params[:id] }, status: 200
       end
     rescue => error

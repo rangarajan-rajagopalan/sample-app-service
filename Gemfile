@@ -45,3 +45,5 @@ gem 'redis-namespace','1.5.1'
 gem 'redis-rails'
 
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'rack-cors', '~> 0.2.9', require: 'rack/cors'
