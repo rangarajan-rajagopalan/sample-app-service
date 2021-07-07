@@ -40,10 +40,10 @@ gem 'jquery-rails'
 
 gem 'mysql2', '0.3.19'
 gem 'redis', '3.2.1'
-gem 'redis-objects', '~> 1.2', '>= 1.2.1'
-gem 'redis-namespace','1.5.1'
-gem 'redis-rails'
+gem 'jwt'
+gem 'json'
 
-gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', '~> 3.1.7'
 
+gem 'simple_command'
 gem 'rack-cors', '~> 0.2.9', require: 'rack/cors'

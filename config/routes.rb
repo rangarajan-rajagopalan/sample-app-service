@@ -1,21 +1,39 @@
 App::Application.routes.draw do
-  get "/notes", to: "notes#list"
-  get "/notes/:id", to: "notes#details"
-  post "/notes", to: "notes#insert"
-  put "/notes/:id", to: "notes#update"
-  delete "/notes/:id", to: "notes#remove"
+
+  # resources :notes do
+  #       member do
+  #         get 'list'
+  #         post 'insert'
+  #         put 'update'
+  #         delete 'remove'
+  #       end
+  #       collection do
+  #         get 'list'
+  #       end
+  # end
+
+
+  # use resource
+  # get "/notes", to: "notes#list"
+  # get "/notes/:id", to: "notes#details"
+  # post "/notes", to: "notes#insert"
+  # put "/notes/:id", to: "notes#update"
+  # delete "/notes/:id", to: "notes#remove"
 
   get "/folders", to: "folders#list"
   get "/folders/:id", to: "folders#details"
   post "/folders", to: "folders#insert"
   put "/folders/:id", to: "folders#update"
-  delete "/folders", to: "folders#remove"
+  delete "/folders/:id", to: "folders#remove"
 
   get "/users", to: "users#list"
   get "/users/:id", to: "users#details"
   post "/users", to: "users#insert"
   put "/users/:id", to: "users#update"
   delete "/users/:id", to: "users#remove"
+
+  post 'authenticate', to: 'authentication#authenticate'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

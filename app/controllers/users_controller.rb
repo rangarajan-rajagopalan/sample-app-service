@@ -41,14 +41,14 @@ class UsersController < ApplicationController
     user = Users.where(user_id: params[:id]).first
     if user.nil?
       render json: { error: "user not found" }, status: 404
-    else
-      args = {
-        user_first_name: params[:user][:user_first_name],
-        user_last_name: params[:user][:user_last_name]
-      }
-      user.update_attributes(args)
-      render json: { message: "user details updated", user_id: params[:id] }, status: 200
+      return
     end
+    args = {
+      user_first_name: params[:user][:user_first_name],
+      user_last_name: params[:user][:user_last_name]
+    }
+    user.update_attributes(args)
+    render json: { message: "user details updated", user_id: params[:id] }, status: 200
   end
 
   # DELETE /users/:id
